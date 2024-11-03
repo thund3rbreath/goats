@@ -47,7 +47,7 @@ class Goats {
     async countdown(seconds) {
         for (let i = seconds; i >= 0; i--) {
             readline.cursorTo(process.stdout, 0);
-            process.stdout.write(`===== Waiting ${i} seconds to continue loop--- Join AirDrop BOT for more scripts, https://t.me/+CtchJrTcsJgzNTVl     =====`);
+            process.stdout.write(`===== Waiting ${i} seconds to check again--- Join AirDrop BOT for more scripts, https://t.me/+CtchJrTcsJgzNTVl     =====`);
             await new Promise(resolve => setTimeout(resolve, 1000));
         }
         this.log('', 'info');
@@ -259,7 +259,7 @@ class Goats {
                 await this.handleMissions(accessToken);
 
                 console.log(`Waiting for next account...`.yellow);
-                await this.countdown(30); // Wait for 17 seconds before the next loop
+                await this.countdown(20); // Wait for 17 seconds before the next loop
             }
         }
     }
